@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', [ShortUrlController::class, 'index']);
+Route::post('/', [ShortUrlController::class, 'createUrl'])->name('url.shorten');
+Route::get('/short/{shortURLKey}', '\AshAllenDesign\ShortURL\Controllers\ShortURLController');
